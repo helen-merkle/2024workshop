@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import TagManager from 'react-gtm-module'; // import Google Tag Manager
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "assets/styles/tailwind.css";
@@ -15,6 +16,12 @@ import Auth from "layouts/Auth.js";
 import Landing from "views/Landing.js";
 import Profile from "views/Profile.js";
 import Index from "views/Index.js";
+
+// Initialize Google Tag Manager
+const tagManagerArgs = {
+    gtmId: 'GTM-5D3MWZGR' // your Container ID
+};
+TagManager.initialize(tagManagerArgs);
 
 ReactDOM.render(
   <BrowserRouter>
